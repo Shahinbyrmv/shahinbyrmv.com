@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahin Bairamovi</title>
+  <meta name="description" content="Shahin Bairamovi — Bilgisayar Mühendisliği öğrencisi, Backend & DevOps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#" class="brand mono">shahinbyrmv<span class="accent">.com</span></a>
+      <nav class="nav">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#yetenekler">Yetenekler</a>
+        <a href="#deneyim">Deneyim</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <button id="loginBtn" class="btn btn-ghost">Giriş</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <img class="avatar" src="shahin.jpg" alt="Shahin Bairamovi" width="220" height="220">
+      <div class="hero-text">
+        <h1 id="name" class="name">SHAHIN BAIRAMOVI</h1>
+        <p id="title" class="title"></p>
+        <div class="hero-actions">
+          <a id="roadmapLink" class="btn btn-primary" href="https://backendroadmapsb.netlify.app" target="_blank" rel="noopener">Backend Roadmap →</a>
+          <a id="githubLink" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+          <a id="linkedinLink" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimda" class="wrap section">
+      <h2 class="section-title"><span class="mono accent">01.</span> Hakkımda</h2>
+      <p id="about" class="about"></p>
+    </section>
+
+    <section id="yetenekler" class="wrap section">
+      <h2 class="section-title"><span class="mono accent">02.</span> Yetenekler</h2>
+      <div id="skills" class="skills"></div>
+    </section>
+
+    <section id="deneyim" class="wrap section">
+      <h2 class="section-title"><span class="mono accent">03.</span> Deneyim</h2>
+      <div id="experience" class="timeline"></div>
+    </section>
+
+    <section class="wrap section">
+      <h2 class="section-title"><span class="mono accent">04.</span> Eğitim</h2>
+      <div id="education" class="timeline"></div>
+    </section>
+
+    <section id="iletisim" class="wrap section contact">
+      <h2 class="section-title"><span class="mono accent">05.</span> İletişim</h2>
+      <p class="muted">Bir proje, staj ya da iş birliği için bana yazabilirsin.</p>
+      <a id="emailLink" class="email mono"></a>
+      <div class="contact-links">
+        <a id="githubLink2" target="_blank" rel="noopener">GitHub</a>
+        <a id="linkedinLink2" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer mono muted">© <span id="year"></span> Shahin Bairamovi</footer>
+
+  <!-- Giriş penceresi -->
+  <dialog id="loginDialog" class="dialog">
+    <form id="loginForm">
+      <h3>Yönetici Girişi</h3>
+      <label>Şifre
+        <input id="passwordInput" type="password" autocomplete="current-password" required>
+      </label>
+      <p id="loginError" class="error"></p>
+      <div class="row-end">
+        <button type="button" class="btn btn-ghost" id="loginCancel">Vazgeç</button>
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Düzenleme paneli -->
+  <aside id="editor" class="editor" hidden>
+    <div class="editor-head">
+      <h3>İçeriği Düzenle</h3>
+      <button id="editorClose" class="btn btn-ghost">Kapat</button>
+    </div>
+    <form id="editorForm" class="editor-body"></form>
+    <div class="editor-foot">
+      <span id="saveStatus" class="muted"></span>
+      <button id="logoutBtn" class="btn btn-ghost">Çıkış</button>
+      <button id="saveBtn" class="btn btn-primary">Kaydet</button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
